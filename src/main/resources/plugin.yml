@@ -1,0 +1,13 @@
+name: ZZMPlugin
+version: '${project.version}'
+main: pers.luthree.zzmplugin.ZZMPlugin
+api-version: 1.18
+authors: [ Luthree ]
+description: Luthree's first plugin. Made for ZZM.
+website: luthr.ee
+commands:
+  zzm:
+    description: 向自己发送Z↗Z↗M↗↘。你也可以在config.yml中自定义发送内容.
+    usage: /<command>
+    permission: <plugin name>.zzm
+    permission-message: You don't have <permission>
