@@ -10,4 +10,4 @@ commands:
     description: 向自己发送Z↗Z↗M↗↘。你也可以在config.yml中自定义发送内容.
     usage: /<command>
     permission: <plugin name>.zzm
-    permission-message: You don't have <permission>
+    permission-message: 你没有 <permission> 权限。
