@@ -7,11 +7,29 @@ description: Luthree's first plugin. Made for ZZM.
 website: luthr.ee
 commands:
   zzm:
-    description: 向自己发送Z↗Z↗M↗↘。你也可以在config.yml中自定义发送内容.
+    description: 向自己发送Z↗Z↗M↗↘。你也可以在config.yml中自定义发送内容。
     usage: /zzm
     permission: zzmplugin.zzm
     permission-message: 你没有 <permission> 权限。
+  zzmtitle:
+    description: 在title栏向自己发送Z↗Z↗M↗↘。你也可以在config.yml中自定义发送内容。
+    usage: /zzmtitle
+    permission: zzmplugin.zzm
+    permission-message: 你没有 <permission> 权限。
+  zzmtitleall:
+    description: 在title栏向自己发送Z↗Z↗M↗↘。你也可以在config.yml中自定义发送内容。
+    usage: /zzmtitleall
+    permission: zzmplugin.zzmtitleall
+    permission-message: 你没有 <permission> 权限。
 permissions:
+  zzmplugin.*:
+    description: 给予使用ZZMPlugin所有命令的权限
+    children:
+      zzmplugin.zzm: true
+      zzmplugin.zzmtitleall: true
   zzmplugin.zzm:
-    description: 允许使用zzm指令
+    description: 允许使用zzm和zzmtitle指令
     default: true
+  zzmplugin.zzmtitleall:
+    description: 允许使用zzmtitleall指令
+    default: op

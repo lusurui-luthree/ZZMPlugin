@@ -1,5 +1,6 @@
 package pers.luthree.zzmplugin;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -34,6 +35,19 @@ public final class ZZMPlugin extends JavaPlugin {
             Player player = (Player) sender;
             player.sendMessage(config.getString("zzm"));
             return true; // 返回true防止返回指令的usage信息
+        }
+        if (command.getName().equalsIgnoreCase("zzmtitle")){
+            if (!(sender instanceof Player)){
+                sender.sendMessage("你必须是一名玩家！");
+                return true;
+            }
+            Player player = (Player) sender;
+            player.sendTitle(config.getString("zzm"), "Vi Zi O!!!!!", 10, 20, 10);
+        }
+        if (command.getName().equalsIgnoreCase("zzmtitleall")){
+            for (Player player : Bukkit.getOnlinePlayers()) {
+                player.sendTitle(config.getString("zzm"), "Vi Zi O!!!!!", 10, 20, 10);
+            }
         }
         return false; // 返回usage
     }
