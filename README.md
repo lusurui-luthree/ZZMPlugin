@@ -30,4 +30,4 @@
 
 ### 权限节点
 
-- ZZMPlugin.zzm : 允许使用zzm指令
+- zzmplugin.zzm : 允许使用zzm指令
