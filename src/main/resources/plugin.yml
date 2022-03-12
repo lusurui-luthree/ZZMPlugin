@@ -11,6 +11,7 @@ commands:
     usage: /zzm
     permission: zzmplugin.zzm
     permission-message: 你没有 <permission> 权限。
-  permissions:
+permissions:
+  zzmplugin.zzm:
     description: 允许使用zzm指令
     default: true
